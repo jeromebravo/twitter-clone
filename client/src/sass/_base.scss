@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --color-primary: #1DA1F2;
+
+    --color-primary-dark: #1A91DA;
+
+    --color-primary-light: #71C9F8;
+    --color-primary-light-2: #E8F5FE;
+
+    --color-gray: #657786;
+    --color-gray-2: #F5F8FA;
+
+    --color-red: #E5245E;
+
+    --color-green: #17BF63;
+}
+
+$bp-largest: 81.25em; // 1300px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 46.875em; // 750px
+$bp-smallest: 31.25em; // 500px
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 50%; // 8rem
+    }
+
+    @media only screen and (max-width: 25em) { // 400px
+        font-size: 37.5%; // 6rem
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}

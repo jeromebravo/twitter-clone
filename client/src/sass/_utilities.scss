@@ -1,0 +1,128 @@
+.mb--mini {
+    margin-bottom: .3rem;
+}
+
+.mb--smallest {
+    margin-bottom: .8rem;
+}
+
+.mb--small {
+    margin-bottom: 1.5rem;
+}
+
+.mb--medium {
+    margin-bottom: 4rem;
+}
+
+.mb--large {
+    margin-bottom: 5rem;
+}
+
+.mr--smallest {
+    margin-right: .6rem;
+}
+
+.mr--small {
+    margin-right: 1rem;
+}
+
+.mr--medium {
+    margin-right: 3rem;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p--small {
+    padding: 1rem 1.5rem;
+}
+
+.px--small {
+    padding: 0 .8rem;
+}
+
+.px--medium {
+    padding: 0 1.3rem;
+}
+
+.py--small {
+    padding: .8rem 0;
+}
+
+.py--medium {
+    padding: 1.3rem 0;
+}
+
+.py--large {
+    padding: 1.6rem 0;
+}
+
+.color--black {
+    color: black !important;
+}
+
+.color--gray {
+    color: var(--color-gray) !important;
+}
+
+.color--primary {
+    color: var(--color-primary) !important;
+}
+
+.color--red {
+    color: var(--color-red) !important;
+}
+
+.color--green {
+    color: var(--color-green) !important;
+}
+
+.bold-font {
+    font-weight: 700 !important;
+}
+
+.border--bottom {
+    border-bottom: 1px solid rgba(black, .1);
+}
+
+.border--top {
+    border-top: 1px solid rgba(black, .1);
+}
+
+.border--bottom-primary {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.font--large {
+    font-size: 1.9rem;
+}
+
+.unhide {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.border-bottom-left-radius {
+    border-bottom-left-radius: 20px;
+
+    @media only screen and (max-width: 40.625em) { // 650px
+        border-bottom-left-radius: 0;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.background-primary {
+    background-color: var(--color-primary);
+    color: white;
+}

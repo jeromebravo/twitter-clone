@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://localhost/twitter_clone",
+    "jwtSecret": "twitterclonesecretkey"
+}

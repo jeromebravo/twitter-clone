@@ -1,0 +1,122 @@
+.landing {
+    display: flex;
+    height: 90vh;
+
+    @media only screen and (max-width: $bp-small) {
+       flex-direction: column-reverse;
+    }
+
+    &__description, &__option {
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__description {
+        background-color: var(--color-primary-light);
+        position: relative;
+        overflow: hidden;
+
+        &-box {
+            position: absolute;
+            z-index: 5;
+        }
+    }
+
+    &__option {
+        &-box {
+            width: 55%;
+
+            @media only screen and (max-width: $bp-largest) {
+                width: 60%;
+            }
+
+            @media only screen and (max-width: $bp-large) {
+                width: 65%;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 70%;
+            }
+        }
+    }
+
+    &__background {
+        height: 170rem;
+        margin-top: 10rem;
+        margin-left: 40rem;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 120rem;
+            margin-left: 20rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            height: 90rem;
+        }
+    }
+}
+
+.footer {
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+
+    font-size: 1.2rem;
+    color: var(--color-gray);
+    text-align: center;
+    
+    & * {
+        margin: 0 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        border-bottom: 1px solid white;
+        display: inline-block;
+
+        &:hover {
+            border-bottom: 1px solid var(--color-gray);
+        }
+    }
+
+    &__text {
+        display: inline-block;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(black, .4);
+    z-index: 100;
+    display: none;
+
+    &__content {
+        width: 55rem;
+        margin: 4rem auto 0 auto;
+        background-color: white;
+        border-radius: 20px;
+
+        @media only screen and (max-width: 40.625em) { // 650px
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 0;
+            height: 100%;
+        }
+    }
+}
