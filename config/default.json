@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://jeromebravo:thisismypassword@twitter-clone.jhe6k.mongodb.net/twitter-clone?retryWrites=true&w=majority",
-    "jwtSecret": "twitterclonesecretkey"
+    "mongoURI": "",
+    "jwtSecret": ""
 }
