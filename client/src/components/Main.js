@@ -13,16 +13,18 @@ import Follow from './follow/Follow';
 import {getLikes} from '../actions/likes';
 import {getRetweets} from '../actions/retweets';
 import {getFollowings} from '../actions/followings';
-const Main = ({history, removeAlert, getLikes, getRetweets, getFollowings}) => {
+const Main = ({history, removeAlert, getLikes, getRetweets, getFollowings, isAuthenticated}) => {
     useEffect(() => {
         history.listen(() => removeAlert());
     }, [history]);
 
     useEffect(() => {
-        getLikes();
-        getRetweets();
-        getFollowings();
-    }, []);
+        if(isAuthenticated) {
+            getLikes();
+            getRetweets();
+            getFollowings();
+        }
+    }, [isAuthenticated]);
 
     return (
         <Switch>
@@ -40,4 +42,8 @@ const Main = ({history, removeAlert, getLikes, getRetweets, getFollowings}) => {
     );
 }
 
-export default withRouter(connect(null, {removeAlert, getLikes, getRetweets, getFollowings})(Main));
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+})
+
+export default withRouter(connect(mapStateToProps, {removeAlert, getLikes, getRetweets, getFollowings})(Main));

@@ -1,3 +1,4 @@
 node_modules
 client/node_modules
 markup
+config/default.json

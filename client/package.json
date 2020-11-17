@@ -30,7 +30,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "node-sass src/sass/main.scss src/App.css -w"
+    "sass": "node-sass src/sass/main.scss src/App.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/App.comp.css",
+    "compress:css": "node-sass src/App.comp.css src/App.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass compress:css"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +55,10 @@
   },
   "proxy": "http://localhost:3001",
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "autoprefixer": "^10.0.2",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.2.0"
   }
 }
